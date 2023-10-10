@@ -1,0 +1,31 @@
+<template>
+  <div>
+    <el-row>
+        <el-col :span="24"><div class="grid-content bg-purple-dark"><h1>这是一个登录页</h1></div></el-col>
+    </el-row>
+    <el-row>
+        <el-col :span="24"><div class="grid-content bg-purple-dark1">
+            <el-input v-model="input" placeholder="请输入账号"></el-input>
+            <el-input v-model="input" placeholder="请输入密码"></el-input>
+
+        </div></el-col>
+    </el-row>
+    <el-row>
+         <el-col :span="24"><div class="grid-content bg-purple-dark"><el-button type="primary">登录</el-button><el-button type="primary">注册</el-button></div></el-col>
+         
+    </el-row>
+  </div>
+</template>
+
+<script>
+
+</script>
+
+<style>
+.bg-purple-dark1{
+    width: 250px;
+    margin: 0 auto 50px auto;
+
+}
+
+</style>

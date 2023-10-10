@@ -80,6 +80,11 @@ export default new Router({
       path: '/gdw',
       name: 'gdw',
       component: gdw => require(['@/components/gdw'], gdw)
+    },
+    {
+      path: '/qnmgdw',
+      name: 'qnmgdw',
+      component: qnmgdw => require(['@/components/qnmgdw'], qnmgdw)
     }
 
 
