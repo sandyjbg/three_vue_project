@@ -4,7 +4,7 @@
             <el-col :span="24"><div class="grid-content bg-purple-dark"><h1>注册一个JB账号</h1></div></el-col>
         </el-row>
         
-        <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
+        <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px"  label-position="left" class="demo-ruleForm">
             <el-form-item label="账户名称" prop="name">
                 <el-input v-model="ruleForm.name"></el-input>
             </el-form-item>
@@ -153,7 +153,7 @@ export default {
     },
     methods: {
       submitForm(formName) {
-        this.$refs[formName].validate((valid) => {
+        this.$refs["ruleForm"].validate((valid) => {
           if (valid) {
             alert('submit!');
           } else {

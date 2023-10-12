@@ -82,21 +82,26 @@ export default new Router({
       component: gdw => require(['@/components/gdw'], gdw)
     },
     {
-      path: '/qnmgdw',
-      name: 'qnmgdw',
-      component: qnmgdw => require(['@/components/qnmgdw'], qnmgdw)
-    },
-    {
       path: '/ykj',
       name: 'ykj',
       component: ykj => require(['@/components/ykj'], ykj)
     },
     {
-      path: '/qnmykj',
-      name: 'qnmykj',
-      component: qnmykj => require(['@/components/qnmykj'], qnmykj)
+      path: '/budong',
+      name: 'budong',
+      component: budong => require(['@/components/web/budong'], budong),
+      children:[
+        {
+          path: '/',
+          name: 'login',
+          component: login => require(['@/components/web/login'], login)
+        },
+        {
+          path: 'qnmykj',
+          name: 'qnmykj',
+          component: qnmykj => require(['@/components/web/qnmykj'], qnmykj)
+        }
+      ]
     }
-
-    
   ]
 })
