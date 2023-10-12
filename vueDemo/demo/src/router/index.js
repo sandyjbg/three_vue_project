@@ -85,9 +85,17 @@ export default new Router({
       path: '/qnmgdw',
       name: 'qnmgdw',
       component: qnmgdw => require(['@/components/qnmgdw'], qnmgdw)
+    },
+    {
+      path: '/ykj',
+      name: 'ykj',
+      component: ykj => require(['@/components/ykj'], ykj)
+    },
+    {
+      path: '/qnmykj',
+      name: 'qnmykj',
+      component: qnmykj => require(['@/components/qnmykj'], qnmykj)
     }
-
-
 
     
   ]
