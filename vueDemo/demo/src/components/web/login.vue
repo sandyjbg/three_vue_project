@@ -2,7 +2,7 @@
   <div>
      <el-row>
         <el-col :span="24"><div class="grid-content bg-purple-dark1">
-            <el-input v-model="input" placeholder="请输入账号（关大维）"></el-input>
+            <el-input v-model="input" placeholder="请输入账号（关大维3）"></el-input>
             <el-input v-model="input" placeholder="请输入密码"></el-input>
         </div></el-col>
     </el-row>
