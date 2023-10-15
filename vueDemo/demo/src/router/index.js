@@ -92,7 +92,7 @@ export default new Router({
       component: budong => require(['@/components/web/budong'], budong),
       children:[
         {
-          path: '/',
+          path: '/login',
           name: 'login',
           component: login => require(['@/components/web/login'], login)
         },
@@ -100,6 +100,11 @@ export default new Router({
           path: 'qnmykj',
           name: 'qnmykj',
           component: qnmykj => require(['@/components/web/qnmykj'], qnmykj)
+        },
+        {
+          path: 'forgetpassword',
+          name: 'forgetpassword',
+          component: forgetpassword => require(['@/components/web/forgetpassword'], forgetpassword)
         }
       ]
     }

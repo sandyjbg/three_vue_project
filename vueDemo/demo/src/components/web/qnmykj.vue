@@ -1,12 +1,12 @@
 <template>
     <div class="wtf">
         <el-row>
-            <el-col :span="24"><div class="grid-content bg-purple-dark"><h1>注册一个JB账号</h1></div></el-col>
+            <el-col :span="24"><div class="grid-content bg-purple-dark2"><h1>注册一个JB账号</h1></div></el-col>
         </el-row>
-        
+
         <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px"  label-position="left" class="demo-ruleForm">
-            <el-form-item label="账户名称" prop="name">
-                <el-input v-model="ruleForm.name"></el-input>
+            <el-form-item label="账户名称" prop="name" status-icon="el-icon-check">
+                <el-input v-model="ruleForm.name" ></el-input>
             </el-form-item>
 
             <el-form-item label="姓名" prop="name2">
@@ -54,8 +54,8 @@
             </el-form-item>
 
             <el-form-item>
-                <el-button type="primary" @click="submitForm('ruleForm')">注册</el-button>
-                <el-button @click="resetForm('ruleForm')">取消</el-button>
+                <el-button type="primary" @click="submitForm('ruleForm')" icon="el-icon-plus">注册</el-button>
+                <el-button @click="tiao()" icon="el-icon-close">取消</el-button>
             </el-form-item>
         </el-form>
     </div>
@@ -64,22 +64,6 @@
 <script>
 export default {
     data() {
-        var checkAge = (rule, value, callback) => {
-        if (!value) {
-          return callback(new Error('年龄不能为空'));
-        }
-        setTimeout(() => {
-          if (!Number.isInteger(value)) {
-            callback(new Error('请输入数字值'));
-          } else {
-            if (value < 18) {
-              callback(new Error('必须年满18岁'));
-            } else {
-              callback();
-            }
-          }
-        }, 1000);
-      };
       var validatePass = (rule, value, callback) => {
         if (value === '') {
           callback(new Error('请输入密码'));
@@ -162,8 +146,9 @@ export default {
           }
         });
       },
-      resetForm(formName) {
-        this.$refs[formName].resetFields();
+      tiao()
+      {
+        this.$router.push({path:'/login'})
       }
     }
   }
@@ -171,7 +156,7 @@ export default {
 
 <style>
 .wtf{
-    width:20%;
+    width:50%;
     margin:0 auto;
 }
 </style>
