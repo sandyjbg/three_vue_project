@@ -87,6 +87,16 @@ export default new Router({
       component: ykj => require(['@/components/ykj'], ykj)
     },
     {
+      path: '/echart',
+      name: 'echart',
+      component: echart => require(['@/components/echart'], echart)
+    },
+    {
+      path: '/cnm',
+      name: 'cnm',
+      component: cnm => require(['@/components/cnm'], cnm)
+    },
+    {
       path: '/budong',
       name: 'budong',
       component: budong => require(['@/components/web/budong'], budong),

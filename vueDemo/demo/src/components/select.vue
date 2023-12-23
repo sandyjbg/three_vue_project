@@ -15,7 +15,7 @@ export default {
       return {
         options: [{
           value: '选项1',
-          label: '海都老'
+          label: '海都w老'
         }, {
           value: '选项2',
           label: '烤鸭'

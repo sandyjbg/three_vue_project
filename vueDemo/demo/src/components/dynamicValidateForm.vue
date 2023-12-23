@@ -20,7 +20,7 @@
         required: true, message: '域名不能为空', trigger: 'blur'
         }"
     >
-        <el-input v-model="domain.title"></el-input>
+        <el-input v-bind="domain.title"></el-input>
         <el-button @click.prevent="removeDomain(domain)">删除</el-button>
     </el-form-item>
     </div>
